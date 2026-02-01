@@ -2,3 +2,5 @@ transformers
 langchain_core
 langchain-huggingface
 huggingface_hub
+datasets
+os

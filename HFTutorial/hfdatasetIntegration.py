@@ -19,3 +19,10 @@ text = dataset[0]["text"]
 # binary classifier that returns scores (positive and negative) for all labels.
 result = client.text_classification(text)
 print(result)
+
+# print best label rather than both label
+best = max(result, key=lambda x: x.score)
+print({
+    "label": best.label,
+    "confidence": best.score
+})
